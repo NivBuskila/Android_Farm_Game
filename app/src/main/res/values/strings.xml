@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">CarGame</string>
-    <string name="score_format">Score: %d</string>
+    <string name="combined_score_format">Score: %d</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="map">Map</string>
+    <string name="farm_game">Farm Game</string>
+    <string name="score_0">Score: 0</string>
 </resources>

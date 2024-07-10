@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/day_background">
+
+    <TextView
+        android:id="@+id/game_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="@string/farm_game"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:textColor="@color/red"/>
+
+    <LinearLayout
+        android:id="@+id/button_control_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/game_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button Control Game"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/pace_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_slow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Slow"
+                android:textStyle="bold"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/radio_fast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fast"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/start_game_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Start Button Control Game"
+            android:textSize="16sp"
+            android:backgroundTint="@color/red"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/start_tilt_game_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_control_container"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Start Tilt Control Game"
+        android:textSize="18sp"
+        android:backgroundTint="@color/red"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/leaderboard_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/start_tilt_game_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Leaderboard"
+        android:textSize="18sp"
+        android:backgroundTint="@color/red"
+        android:textColor="@color/white" />
+
+</RelativeLayout>
