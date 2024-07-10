@@ -1,69 +1,42 @@
-# Farm Game
 
-This is a simple Android game where the player controls a tractor to avoid obstacles. The game features a day/night mode toggle, score tracking, and a limited number of lives.
+# Car Game
+
+## Description
+Car Game is an Android application that simulates a driving experience where the player controls a tractor, avoiding obstacles and collecting corn. The game features both button and tilt controls, providing an engaging and interactive gameplay experience.
 
 ## Features
+- Dynamic obstacle generation
+- Button and tilt control options
+- Score tracking
+- Lives system
+- Sound effects
+- Leaderboard with geolocation
+- Responsive UI adapting to different screen sizes
 
-- **Obstacle Avoidance**: Navigate the tractor to avoid obstacles.
-- **Day/Night Mode**: Toggle between day and night background themes.
-- **Score Tracking**: Keep track of your score as you avoid obstacles.
-- **Lives System**: The player has three lives. If an obstacle is hit, one life is lost. The game restarts when all lives are lost.
+## Technologies Used
+- Java
+- Android SDK
+- Google Location Services API
 
-## Screenshots
-
-![Game Screenshot](path_to_screenshot.png)
-
-## Installation
-
-1. Clone the repository:
+## Setup
+1. Clone the repository to your local machine:
    ```sh
-   git clone https://github.com/your_username/farm-game.git
+   git clone https://github.com/yourusername/cargame.git
    ```
-
 2. Open the project in Android Studio.
-
-3. Build and run the project on an Android device or emulator.
+3. Ensure you have the latest Android SDK installed.
+4. Configure an emulator or connect an Android device.
+5. Build and run the application.
 
 ## How to Play
+1. Use on-screen buttons or tilt your device to move the tractor left and right.
+2. Avoid obstacles (scarecrows) to maintain your lives.
+3. Collect corn to increase your score.
+4. The game ends when you run out of lives.
+5. Enter your name to save your score on the leaderboard.
 
-- Use the left and right buttons to move the tractor and avoid obstacles.
-- Toggle the day/night mode using the button in the top center of the screen.
-- Avoid hitting obstacles to keep your lives intact and continue playing.
-
-## Code Structure
-
-### MainActivity.java
-
-- `initializeViews()`: Initializes UI elements.
-- `setupUpdateLoop()`: Sets up a loop to update the game state.
-- `updateUI()`: Updates the UI based on the game state.
-- `updateLives()`: Updates the UI to reflect the player's current number of lives.
-- `toggleDayNightMode()`: Toggles between day and night modes.
-- `restartGame()`: Resets the game state when the game is over.
-
-### GameManager.java
-
-- `resetGame()`: Resets the game state.
-- `update()`: Updates the game state, moving obstacles and checking for collisions.
-- `moveObstaclesDown()`: Moves obstacles down the grid.
-- `spawnObstacle()`: Spawns a new obstacle at the top of the grid.
-- `moveTractor()`: Moves the tractor left or right based on player input.
-
-## Future Improvements
-
-- Add sound effects and background music.
-- Implement different levels with increasing difficulty.
-- Add power-ups and bonuses.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgements
-
-- The game uses icons from [Material Design Icons](https://material.io/resources/icons/).
-- Background images were sourced from [Unsplash](https://unsplash.com/).
-
----
-
-Customize the file according to your specific needs, including replacing `path_to_screenshot.png` with the actual path to a screenshot of your game. You might also want to include more detailed instructions or explanations depending on your target audience.
+## Permissions
+The app requires the following permissions:
+- Internet access
+- Fine location (for leaderboard geolocation feature)
+- Vibration
