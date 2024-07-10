@@ -17,6 +17,11 @@ public class GameManager {
     public static final int CORN = 3;
     private static final String PREFS_NAME = "CarGamePrefs";
     private static final String TOP_SCORES_KEY = "TopScores";
+    private static final long UPDATE_DELAY_SLOW = 455;
+    private static final long UPDATE_DELAY_FAST = 300;
+    private static final int DISTANCE_WEIGHT = 1;
+    private static final int SCORE_WEIGHT = 10;
+
     private int[][] grid;
     private int rows;
     private int cols;
@@ -24,15 +29,15 @@ public class GameManager {
     private int score;
     private int lives;
     private int distance;
+    private int combinedScore;
+    private long currentUpdateDelay;
+
     private Random random;
     private SoundPlayer soundPlayer;
-    private int combinedScore;
-    private static final int DISTANCE_WEIGHT = 1;
-    private static final int SCORE_WEIGHT = 10;
     private Context context;
     private Vibrator vibrator;
 
-    public GameManager(int rows, int cols, int lives, SoundPlayer soundPlayer, Context context) {
+    public GameManager(int rows, int cols, int lives, SoundPlayer soundPlayer, Context context, int gamePace) {
         this.rows = rows;
         this.cols = cols;
         this.lives = lives;
@@ -41,6 +46,7 @@ public class GameManager {
         this.soundPlayer = soundPlayer;
         this.context = context;
         this.vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+        setGamePace(gamePace);
         resetGame();
     }
 
@@ -110,6 +116,18 @@ public class GameManager {
             tractorColumn++;
         }
         grid[rows - 1][tractorColumn] = TRACTOR;
+    }
+
+    public void setGamePace(int gamePace) {
+        if (gamePace == 1) {
+            currentUpdateDelay = UPDATE_DELAY_FAST;
+        } else {
+            currentUpdateDelay = UPDATE_DELAY_SLOW;
+        }
+    }
+
+    public long getCurrentUpdateDelay() {
+        return currentUpdateDelay;
     }
 
     public int[][] getGrid() {

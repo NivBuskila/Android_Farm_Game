@@ -10,9 +10,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MenuActivity extends AppCompatActivity {
 
-    private static final String EXTRA_GAME_PACE = "EXTRA_GAME_PACE";
-    private static final int PACE_SLOW = 0;
-    private static final int PACE_FAST = 1;
+    public static final String EXTRA_GAME_PACE = "EXTRA_GAME_PACE";
+    public static final int PACE_SLOW = 0;
+    public static final int PACE_FAST = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

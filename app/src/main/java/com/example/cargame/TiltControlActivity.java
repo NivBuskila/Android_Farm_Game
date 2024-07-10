@@ -77,7 +77,7 @@ public class TiltControlActivity extends AppCompatActivity implements SensorEven
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         soundPlayer = new SoundPlayer(this);
-        gameManager = new GameManager(ROWS, COLS, LIVES, soundPlayer, this);        leaderboardManager = new LeaderboardManager();
+        gameManager = new GameManager(ROWS, COLS, LIVES, soundPlayer, this, MenuActivity.PACE_FAST);        leaderboardManager = new LeaderboardManager();
         leaderboardManager.loadEntries(this);
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 

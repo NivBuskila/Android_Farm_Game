@@ -67,8 +67,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        int gamePace = getIntent().getIntExtra(MenuActivity.EXTRA_GAME_PACE, MenuActivity.PACE_SLOW);
+
         soundPlayer = new SoundPlayer(this);
-        gameManager = new GameManager(ROWS, COLS, LIVES, soundPlayer, this);
+        gameManager = new GameManager(ROWS, COLS, LIVES, soundPlayer, this, gamePace);
         leaderboardManager = new LeaderboardManager();
         leaderboardManager.loadEntries(this);
 
@@ -172,7 +174,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
     @Override
     protected void onResume() {
         super.onResume();
@@ -210,7 +211,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     });
                 }
-            }, 0, UPDATE_DELAY);
+            }, 0, gameManager.getCurrentUpdateDelay());
         }
     }
 
