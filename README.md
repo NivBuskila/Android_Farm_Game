@@ -1,5 +1,5 @@
 
-# Car Game
+# Farm Game
 ![WhatsApp Image 2024-07-10 at 12 27 55_1108b089](https://github.com/NivBuskila/CarGame/assets/94639680/b91b806c-3d9c-4b9b-a562-635619a0ba64)
 
 
