@@ -1,6 +1,9 @@
 
 # Farm Game
-![WhatsApp Image 2024-07-10 at 12 27 55_1108b089](https://github.com/NivBuskila/CarGame/assets/94639680/b91b806c-3d9c-4b9b-a562-635619a0ba64)
+![image](https://github.com/NivBuskila/CarGame/assets/94639680/5e959916-0471-4ac6-80bf-4e39634b6fc2)
+![image](https://github.com/NivBuskila/CarGame/assets/94639680/4edade81-61cd-4d95-a5f3-28bebd54b69c)
+![image](https://github.com/NivBuskila/CarGame/assets/94639680/e980a599-08f5-4abd-a557-b5171d005b50)
+![image](https://github.com/NivBuskila/CarGame/assets/94639680/2172db58-9e45-492c-9300-f242ae399c62)
 ![image](https://github.com/NivBuskila/CarGame/assets/94639680/32d3511a-f68d-4624-9c94-2bcc535b6a3d)
 
 
